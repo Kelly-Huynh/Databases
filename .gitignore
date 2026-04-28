@@ -3,5 +3,6 @@ __pycache__
 .pytest_cache
 **.zip
 *.DS_Store
+.DS_Store
 *venv*
 .python-version
