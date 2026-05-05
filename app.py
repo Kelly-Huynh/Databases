@@ -25,3 +25,6 @@ albums = album_repository.all()
 # List them out
 for album in albums:
     print(album)
+
+# Find an album
+print(album_repository.find(1))

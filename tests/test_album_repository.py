@@ -89,3 +89,13 @@ def test_delete_record(db_connection):
         Album(11,"Fodder on My Wings", 1982, 4),
         Album(12,"Ring Ring", 1973, 2)
     ]
+
+"""
+When I call #find on the AlbumRepository with an id
+I get the album corresponding to that id back
+"""
+def test_find(db_connection):
+    db_connection.seed("seeds/music_library.sql")
+    repository = AlbumRepository(db_connection)
+    result = repository.find(3)
+    assert result == Album(3, "Waterloo", 1974, 2)
